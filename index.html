@@ -8,6 +8,17 @@
 </head>
 
 <body>
+
+    <ul>
+        <li v-for="(user, index, c) in usuarios" v-bind:key="index">
+            <b>INDEX:</b>{{index+1}}<button v-on:click="contraer(user)">+</button>
+            <ul v-bind:class="{contraer:user.contraer}">
+                <li><b>ID:</b>{{user.id}}</li>
+                <li><b>NAME:</b>{{user.name}}</li>
+                <li><b>USERNAME:</b>{{user.username}}</li>
+                <li><b>EMAIL:</b>{{user.email}}</li>
+            </li>
+                    </ul>
   <h1>hola</h1>
 
 <img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
